@@ -1,4 +1,4 @@
-# Forecast-crypto-currency-price-prediction
+# TimeSeriesForecasting-crypto-currency-price-prediction
 ## Introduction
 ## Data Wrangling and Feature Engineering
 ## Machine Learning Model
