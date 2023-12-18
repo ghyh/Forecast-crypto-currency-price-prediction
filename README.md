@@ -10,9 +10,15 @@ Basic check on training data and test data has been performed to verfiy that the
 Before feeding training data into the ML model, outliners were identified in the chart of historical data and basic statistics table
 ![Screenshot 2023-12-17 at 17-50-40 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/2ccacc4a-e9fd-4f38-862f-ac5a4ae0d639)   
 ![Screenshot 2023-12-17 at 17-56-11 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/2ca1257d-bd2a-4234-8bef-b53249ab01d6)   
+### Exclusion of Outliers
 After excluding outlier data points in the column "Volume_CiVilium" that are 3 or more SD away from the mean, the fluctuation in the chart of historical data on Volume_CiVilium has been significantly reduced, as shown below. The SD has been reduced from 48 to 11.
 ![Screenshot 2023-12-17 at 17-59-53 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/c2e1fdd5-f4ae-4e5a-b8ea-4373916f7bf3)   
+### Nomralization of Timestamp Column
+The train data set is split into two subsets, where the first 80% of data points in the timeline are training data while the rest of 20% data points are the validation data. The values of timestamp in the above two sets have been normalized using the first (i.e. the earliest) timestamp to reduce the over-presentation of the column "Unix_Timestamp" in the training process.
 ## Machine Learning Model
+The ML model used in this study is a neural network composed of (1) 4 LSTM layers and (2) 2 Dense layers, as shown below.
+![Screenshot 2023-12-17 at 18-15-54 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/3baff3ff-2e5e-452e-96a3-4ceb2fa3b671)
+
 ## Result and Discussion
 ### Reference
 1. CiVilium Price Prediction, Kaggle https://www.kaggle.com/competitions/CiVilium/overview   
