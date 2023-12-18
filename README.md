@@ -1,6 +1,17 @@
 # TimeSeriesForecasting-crypto-currency-price-prediction
 ## Introduction
+The ML model in this repo is to study the Kaggle competition, "CiVilium Price Prediction" (https://www.kaggle.com/competitions/CiVilium/overview)[1], to predict the future trends of the price of a hypothetical cryptocurrency, CiVilium, based on the data of historical prices. 
 ## Data Wrangling and Feature Engineering
+The provided data is split into train and test data sets. The training set has three columns, Unix_Timestamp, Volume_CiVilium and Weighted_Price while the test data set only has the first two. Examples can be found below.
+![Screenshot 2023-12-17 at 17-29-19 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/44c46705-e145-45f7-8e26-32e50cc24362)   
+Basic check on training data and test data has been performed to verfiy that there is no invalid data points, such as negative or null data entry.
+![Screenshot 2023-12-17 at 17-45-55 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/b821428e-2944-4d4a-bb01-9bd922f75dd9)   
+![Screenshot 2023-12-17 at 17-46-19 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/5f872ec2-2c04-454b-90b9-59fa35c34d36)
+Before feeding training data into the ML model, outliners were identified in the chart of historical data and basic statistics table
+![Screenshot 2023-12-17 at 17-50-40 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/2ccacc4a-e9fd-4f38-862f-ac5a4ae0d639)   
+![Screenshot 2023-12-17 at 17-56-11 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/2ca1257d-bd2a-4234-8bef-b53249ab01d6)   
+After excluding outlier data points in the column "Volume_CiVilium" that are 3 or more SD away from the mean, the fluctuation in the chart of historical data on Volume_CiVilium has been significantly reduced, as shown below. The SD has been reduced from 48 to 11.
+![Screenshot 2023-12-17 at 17-59-53 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/c2e1fdd5-f4ae-4e5a-b8ea-4373916f7bf3)   
 ## Machine Learning Model
 ## Result and Discussion
 ### Reference
