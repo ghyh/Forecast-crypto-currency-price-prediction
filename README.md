@@ -18,7 +18,7 @@ The train data set is split into two subsets, where the first 80% of data points
 ## Machine Learning Model
 The ML model used in this study is a neural network composed of (1) 4 LSTM layers and (2) 2 Dense layers, as shown below.
 ![Screenshot 2023-12-17 at 18-15-54 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/3baff3ff-2e5e-452e-96a3-4ceb2fa3b671)
-
+4 layers of LTSM layers have been chosen for the best results of prediction. In the Dense layer at the output, ReLu (Rectified Linear Unit)[8],is used as activiation function. The hyperparameters in this study, such as the dimension of the LSTM model (lstm_dims),size of the training batch (batch_size), learning rate (learning_rate), were chosen after carefully calculating the loss of validation. 
 ## Result and Discussion
 ### Reference
 1. CiVilium Price Prediction, Kaggle https://www.kaggle.com/competitions/CiVilium/overview   
@@ -28,3 +28,4 @@ The ML model used in this study is a neural network composed of (1) 4 LSTM layer
 5. Using a Simple RNN for forecasting, Repository "https-deeplearning-ai/tensorflow-1-public/C4/W3/ungraded_labs" in deeplearning.ai,https://github.com/https-deeplearning-ai/tensorflow-1-public/blob/64287d2983de3ffd6d6de9c26d9f1f558fcd3968/C4/W3/ungraded_labs/C4_W3_Lab_1_RNN.ipynb   
 6. How can Tensorflow be used to standardize the data using Python?, GeeksforGeeks, https://www.geeksforgeeks.org/how-can-tensorflow-be-used-to-standardize-the-data-using-python/   
 7. Multivariate Time Series Forecasting Using Random Forest, Hafidz Zulkifli, Medium https://towardsdatascience.com/multivariate-time-series-forecasting-using-random-forest-2372f3ecbad1
+8. A Gentle Introduction to the Rectified Linear Unit (ReLU), Machine Learning Mastery https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/   
