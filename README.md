@@ -17,9 +17,11 @@ After excluding outlier data points in the column "Volume_CiVilium" that are 3 o
 The train data set is split into two subsets, where the first 80% of data points in the timeline are training data while the rest of 20% data points are the validation data. The values of timestamp in the above two sets have been normalized using the first (i.e. the earliest) timestamp to reduce the over-presentation of the column "Unix_Timestamp" in the training process.
 ## Machine Learning Model
 The ML model used in this study is a neural network composed of (1) 4 LSTM layers and (2) 2 Dense layers, as shown below.
-![Screenshot 2023-12-17 at 18-15-54 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/3baff3ff-2e5e-452e-96a3-4ceb2fa3b671)
-4 layers of LTSM layers have been chosen for the best results of prediction. In the Dense layer at the output, ReLu (Rectified Linear Unit)[8],is used as activiation function. The hyperparameters in this study, such as the dimension of the LSTM model (lstm_dims),size of the training batch (batch_size), learning rate (learning_rate), were chosen after carefully calculating the loss of validation. 
+![Screenshot 2023-12-17 at 18-15-54 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/3baff3ff-2e5e-452e-96a3-4ceb2fa3b671)   
+After testing with a single layer of LSTM (single step test), 4 layers of LTSM layers have been chosen for the best results of prediction. In the Dense layer at the output, ReLu (Rectified Linear Unit)[8],is used as activiation function. The hyperparameters in this study, such as the dimension of the LSTM model (lstm_dims),size of the training batch (batch_size), epochs (epochs) and learning rate (learning_rate), were chosen after carefully calculating the loss of validation. 
 ## Result and Discussion
+The comparison of mean absolute error (MAE) between training and validation data, including the table of caculated MAE and its trend, can be found below.
+One can see that as more epochs goes, the accuracy for both training and validation data sets keeps increasing, and the MAE continues goes downward. This is a good sign that we are not overfitting the training data.
 ### Reference
 1. CiVilium Price Prediction, Kaggle https://www.kaggle.com/competitions/CiVilium/overview   
 2. Multivariate Time Series Forecasting with LSTMs in Keras, Machine Learning Mastery https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/   
