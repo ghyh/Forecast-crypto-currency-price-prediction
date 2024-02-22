@@ -20,8 +20,14 @@ The ML model used in this study is a neural network composed of (1) 4 LSTM layer
 ![Screenshot 2023-12-17 at 18-15-54 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/3baff3ff-2e5e-452e-96a3-4ceb2fa3b671)   
 After testing with a single layer of LSTM (single step test), 4 layers of LTSM layers have been chosen for the best results of prediction. In the Dense layer at the output, ReLu (Rectified Linear Unit)[8],is used as activiation function. The hyperparameters in this study, such as the dimension of the LSTM model (lstm_dims),size of the training batch (batch_size), epochs (epochs) and learning rate (learning_rate), were chosen after carefully calculating the loss of validation. 
 ## Result and Discussion
-The comparison of mean absolute error (MAE) between training and validation data, including the table of caculated MAE and its trend, can be found below.
-One can see that as more epochs goes, the accuracy for both training and validation data sets keeps increasing, and the MAE continues goes downward. This is a good sign that we are not overfitting the training data.
+The mean absolute error (MAE) is used as the loss for comparison between training and validation data. The results, including the table of caculated MAE and its trend, can be found below.
+One can see that as more epochs goes, the accuracy for both training and validation data sets keeps increasing, and the MAE continues goes downward. This is a good sign that we are not overfitting the training data.   
+||Training Set|Validation Set|
+|---|---|---|
+|MAE|1.3458|0.2889|   
+
+![Screenshot 2024-02-22 at 01-00-58 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/48167d93-3b87-47b1-94a5-851f7274894d)   
+When being applied to the test data set, the model also generated good result and finished 7th place on Kaggle's leaderboard. The effort of building a forecasting model using other ML algorithms to compare with the current result is ongoing. 
 ### Reference
 1. CiVilium Price Prediction, Kaggle https://www.kaggle.com/competitions/CiVilium/overview   
 2. Multivariate Time Series Forecasting with LSTMs in Keras, Machine Learning Mastery https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/   
