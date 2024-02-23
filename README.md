@@ -24,10 +24,10 @@ The mean absolute error (MAE) is used as the loss for comparison between trainin
 One can see that as more epochs goes, the accuracy for both training and validation data sets keeps increasing, and the MAE continues goes downward. This is a good sign that we are not overfitting the training data.   
 ||Training Set|Validation Set|
 |---|---|---|
-|MAE|1.3458|0.2889|   
+|MAE|1.3483|0.2940|   
 
-![Screenshot 2024-02-22 at 01-00-58 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/48167d93-3b87-47b1-94a5-851f7274894d)   
-When being applied to the test data set, the model also generated good result and finished 7th place on Kaggle's leaderboard. The effort of building a forecasting model using other ML algorithms to compare with the current result is ongoing. 
+![Screenshot 2024-02-23 at 00-31-14 PricePrediction Kaggle](https://github.com/ghyh/TimeSeriesForecasting-crypto-currency-price-prediction/assets/30448897/0058c19c-f328-4e92-905b-601e3cfe94fd)   
+When being applied to the test data set, the model also generated good result and finished 6th place on Kaggle's leaderboard. The effort of building a forecasting model using other ML algorithms to compare with the current result is ongoing. 
 ### Reference
 1. CiVilium Price Prediction, Kaggle https://www.kaggle.com/competitions/CiVilium/overview   
 2. Multivariate Time Series Forecasting with LSTMs in Keras, Machine Learning Mastery https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/   
